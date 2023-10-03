@@ -9,7 +9,7 @@ include_once 'components/navbar.php';
 
 <?php
 include_once 'backend/database.php';
-$result = mysqli_query($conn,"SELECT * FROM student WHERE id='" . $_GET['ID'] . "'");
+$result = mysqli_query($conn,"SELECT * FROM student WHERE identifier='" . $_GET['ID'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
 
@@ -18,7 +18,7 @@ $row= mysqli_fetch_array($result);
     <form method="post" action="process.php">
         <div>
             <p class="lead">Carnet:</p>
-            <input readonly type="text" class="lead" name="id" id="id" value="<?php echo $row['id']; ?>">
+            <input readonly type="text" class="lead" name="id" id="id" value="<?php echo $row['identifier']; ?>">
             <span class="lead" id="idMessage"></span>
         </div>
         <div>

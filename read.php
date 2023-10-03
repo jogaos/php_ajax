@@ -30,13 +30,13 @@ $result = mysqli_query($conn, "SELECT * FROM student");
                 while ($row = mysqli_fetch_array($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row["id"]; ?></td>
+                        <td><?php echo $row["identifier"]; ?></td>
                         <td><?php echo $row["first_name"]; ?></td>
                         <td><?php echo $row["last_name"]; ?></td>
                         <td><a class="btn btn-success"
-                               href="update.php?ID=<?php echo $row["id"]; ?>">Update</a>
+                               href="update.php?ID=<?php echo $row["identifier"]; ?>">Update</a>
                             <a class="btn btn-danger"
-                               href="delete.php?ID=<?php echo $row["id"]; ?>">Delete</a></td>
+                               href="delete.php?ID=<?php echo $row["identifier"]; ?>">Delete</a></td>
                     </tr>
                     <?php
                     $i++;
