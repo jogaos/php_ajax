@@ -1,6 +1,6 @@
 <?php
 include_once 'database.php';
-$result = mysqli_query($conn,"SELECT * FROM student WHERE ID='" . $_GET['newId'] . "'");
+$result = mysqli_query($conn,"SELECT * FROM student WHERE identifier='" . $_GET['newId'] . "'");
 $row= mysqli_fetch_array($result);
 
 if (mysqli_num_rows($result) > 0) {
